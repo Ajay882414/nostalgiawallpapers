@@ -1,69 +1,93 @@
-import Image from "next/image";
+import ArtworksGallery from "./components/ArtworksGallery";
+import DifferenceSection from "./components/DifferenceSection";
+import EverythingYouReceive from "./components/EverythingYouReceive";
+import FaqSection from "./components/FaqSection";
+import FooterCtaSection from "./components/FooterCtaSection";
+import HeroSliders from "./components/HeroSliders";
+import PricingCta from "./components/PricingCta";
+import TestimonialsSection from "./components/TestimonialsSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-[#060D27] text-white flex flex-col justify-between overflow-x-hidden">
+      {/* Top Header Glow */}
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#1a2d6d]/20 blur-[130px] rounded-full" />
+
+      {/* Hero Header Area */}
+      <section className="relative pt-16 sm:pt-20 pb-6 px-4 text-center max-w-4xl mx-auto z-10">
+        <p className="text-[11px] font-medium tracking-[0.22em] text-[#E8C78B] uppercase mb-4">
+          THE GALLERY THAT FITS IN YOUR POCKET
+        </p>
+
+        <h1 className="text-4xl sm:text-6xl md:text-[68px] font-bold tracking-tight text-white mb-5 leading-tight">
+          Turn Your Screen Into a{" "}
+          <span className="font-serif italic font-normal text-[#E8C78B]">
+            Work of Art.
+          </span>
+        </h1>
+
+        <p className="text-sm sm:text-base text-[#9AA7C2] max-w-2xl mx-auto leading-relaxed font-normal">
+          100+ 4K wallpapers in impasto oil painting – thick texture, deep color
+          and gallery light – for MacBook, laptop and phone. Your screen becomes
+          a real painting.
+        </p>
+      </section>
+
+      {/* Two-Way Infinite Marquee Sliders */}
+      <section className="relative w-full my-3">
+        <HeroSliders />
+      </section>
+
+      {/* Matched CTA Section */}
+      <section className="relative py-8 z-10">
+        <PricingCta />
+      </section>
+
+      {/* Bottom Metrics / Social Proof */}
+      <section className="w-full border-t border-[#131E42] bg-[#0a122c] py-10 mt-6">
+        <div className="max-w-4xl mx-auto px-6 grid grid-cols-3 text-center gap-4">
+          <div>
+            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
+              2,300+
+            </h3>
+            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
+              Happy Customers
+            </p>
+          </div>
+          <div>
+            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
+              4.9/5
+            </h3>
+            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
+              Average Rating
+            </p>
+          </div>
+          <div>
+            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
+              50% OFF
+            </h3>
+            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
+              Ends Tonight
+            </p>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+
+
+      {/* 5. Exact New Every Screen, A Painting Section */}
+      <ArtworksGallery />
+
+
+      <EverythingYouReceive/>
+
+
+      <TestimonialsSection/>
+
+      <DifferenceSection/>
+
+      <FaqSection/>
+
+      <FooterCtaSection/>
+    </main>
   );
 }
