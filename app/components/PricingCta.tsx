@@ -39,49 +39,91 @@ export default function PricingCta() {
         <span className="text-[12px] opacity-70">·</span>
         <span>Instant download</span>
       </div>
+{/* 3. Timer Pill Badge */}
+<div
+  className="
+    mt-2.5
+    inline-flex
+    max-w-[calc(100vw-24px)]
+    flex-wrap
+    items-center
+    justify-center
+    gap-x-2
+    gap-y-1.5
+    px-4
+    py-2
+    sm:px-5
+    sm:py-2
+    rounded-full
+    border
+    border-[#52442d]
+    bg-[#070e28]/70
+    backdrop-blur-sm
+    text-[12px]
+    sm:text-[14px]
+    text-center
+  "
+>
+  {/* Bronze/Gold Dot */}
+  <span className="w-1.5 h-1.5 shrink-0 rounded-full bg-[#B89B66]" />
 
-      {/* 3. Timer Pill Badge */}
-      <div className="mt-2.5 inline-flex items-center gap-2 px-5 py-2 rounded-full border border-[#52442d] bg-[#070e28]/70 backdrop-blur-sm text-[13px] sm:text-[14px]">
-        {/* Bronze/Gold Dot */}
-        <span className="w-1.5 h-1.5 rounded-full bg-[#B89B66]" />
+  {/* Alarm Clock */}
+  <span className="text-[13px] sm:text-[14px] leading-none shrink-0">
+    ⏰
+  </span>
 
-        {/* Alarm Clock */}
-        <span className="text-[14px] leading-none">⏰</span>
+  {/* Launch Text */}
+  <span className="font-semibold text-[#F0CF91] whitespace-nowrap">
+    Launch offer ends in
+  </span>
 
-        {/* Launch Text */}
-        <span className="font-semibold text-[#F0CF91]">
-          Launch offer ends in
-        </span>
+  {/* Dynamic Countdown */}
+  <span className="font-bold text-[#F0CF91] tracking-wide whitespace-nowrap">
+    {String(timeLeft.minutes).padStart(2, "0")}:
+    {String(timeLeft.seconds).padStart(2, "0")}
+  </span>
 
-        {/* Dynamic Countdown */}
-        <span className="font-bold text-[#F0CF91] tracking-wide">
-          {String(timeLeft.minutes).padStart(2, "0")}:
-          {String(timeLeft.seconds).padStart(2, "0")}
-        </span>
+  {/* Separator */}
+  <span className="text-[#F0CF91] font-normal hidden sm:inline">
+    ·
+  </span>
 
-        <span className="text-[#F0CF91] font-normal">·</span>
+  {/* Returns text */}
+  <span className="text-[#F0CF91] font-medium whitespace-nowrap">
+    price returns to $9.90
+  </span>
+</div>
 
-        {/* Returns text */}
-        <span className="text-[#F0CF91] font-medium">
-          price returns to $9.90
-        </span>
-      </div>
+{/* 4. Guarantee & Supported Devices */}
+<div
+  className="
+    mt-4
+    flex
+    items-start
+    sm:items-center
+    justify-center
+    gap-2
+    px-4
+    text-[12px]
+    sm:text-[14px]
+    text-[#8E9BB5]
+    text-center
+    leading-relaxed
+  "
+>
+  {/* Exact Shield Icon */}
+  <svg
+    className="w-4 h-4 shrink-0 mt-0.5 sm:mt-0 text-[#3b82f6]"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+  >
+    <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" />
+  </svg>
 
-      {/* 4. Guarantee & Supported Devices */}
-      <div className="mt-4 flex items-center justify-center gap-2 text-[13px] sm:text-[14px] text-[#8E9BB5]">
-        {/* Exact Shield Icon */}
-        <svg
-          className="w-4 h-4 shrink-0 text-[#3b82f6] "
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" />
-        </svg>
-
-        <span className="">
-          30-day money-back guarantee · Mac, Windows, iPhone &amp; Android
-        </span>
-      </div>
+  <span>
+    30-day money-back guarantee · Mac, Windows, iPhone &amp; Android
+  </span>
+</div>
     </div>
   );
 }

@@ -11,7 +11,25 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#060D27] text-white flex flex-col justify-between overflow-x-hidden">
       {/* Top Header Glow */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-[#1a2d6d]/20 blur-[130px] rounded-full" />
+      <div
+  className="
+    pointer-events-none
+    absolute
+    top-0
+    left-1/2
+    -translate-x-1/2
+    w-[90vw]
+    max-w-[700px]
+    h-[220px]
+    sm:h-[280px]
+    md:h-[350px]
+    bg-[#1a2d6d]/20
+    blur-[80px]
+    sm:blur-[100px]
+    md:blur-[130px]
+    rounded-full
+  "
+/>
 
       {/* Hero Header Area */}
       <section className="relative pt-16 sm:pt-20 pb-6 px-4 text-center max-w-4xl mx-auto z-10">
@@ -43,35 +61,45 @@ export default function Home() {
         <PricingCta />
       </section>
 
-      {/* Bottom Metrics / Social Proof */}
-      <section className="w-full border-t border-[#131E42] bg-[#0a122c] py-10 mt-6">
-        <div className="max-w-4xl mx-auto px-6 grid grid-cols-3 text-center gap-4">
-          <div>
-            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
-              2,300+
-            </h3>
-            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
-              Happy Customers
-            </p>
-          </div>
-          <div>
-            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
-              4.9/5
-            </h3>
-            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
-              Average Rating
-            </p>
-          </div>
-          <div>
-            <h3 className="text-[32px]  font-bold tracking-tight text-[#E8C78B]">
-              50% OFF
-            </h3>
-            <p className="text-[11px] sm:text-[13px] tracking-wider text-[#7988A8] uppercase mt-1 font-medium">
-              Ends Tonight
-            </p>
-          </div>
-        </div>
-      </section>
+     {/* Bottom Metrics / Social Proof */}
+<section className="w-full border-t border-[#131E42] bg-[#0a122c] py-8 sm:py-10 mt-6">
+  <div className="max-w-4xl mx-auto px-4 sm:px-6 grid grid-cols-3 text-center gap-2 sm:gap-4">
+
+    {/* Happy Customers */}
+    <div className="min-w-0 flex flex-col items-center">
+      <h3 className="text-[23px] sm:text-[32px] font-bold tracking-tight text-[#E8C78B] whitespace-nowrap">
+        2,300+
+      </h3>
+
+      <p className="text-[9px] sm:text-[13px] tracking-[0.08em] sm:tracking-wider text-[#7988A8] uppercase mt-1 font-medium leading-tight">
+        Happy Customers
+      </p>
+    </div>
+
+    {/* Average Rating */}
+    <div className="min-w-0 flex flex-col items-center">
+      <h3 className="text-[23px] sm:text-[32px] font-bold tracking-tight text-[#E8C78B] whitespace-nowrap">
+        4.9/5
+      </h3>
+
+      <p className="text-[9px] sm:text-[13px] tracking-[0.08em] sm:tracking-wider text-[#7988A8] uppercase mt-1 font-medium leading-tight">
+        Average Rating
+      </p>
+    </div>
+
+    {/* Discount */}
+    <div className="min-w-0 flex flex-col items-center">
+      <h3 className="text-[23px] sm:text-[32px] font-bold tracking-tight text-[#E8C78B] whitespace-nowrap">
+        50% OFF
+      </h3>
+
+      <p className="text-[9px] sm:text-[13px] tracking-[0.08em] sm:tracking-wider text-[#7988A8] uppercase mt-1 font-medium leading-tight">
+        Ends Tonight
+      </p>
+    </div>
+
+  </div>
+</section>
 
 
       {/* 5. Exact New Every Screen, A Painting Section */}
