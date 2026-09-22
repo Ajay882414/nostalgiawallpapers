@@ -77,5 +77,6 @@ export default function HeroSliders() {
         </div>
       </Marquee>
     </div>
+    
   );
 }
