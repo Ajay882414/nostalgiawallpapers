@@ -4,19 +4,25 @@ import React from "react";
 import Marquee from "react-fast-marquee";
 
 const row1 = [
-  "/image.png",
-  "image.png",
-  "image.png",
-  "image.png",
-  "image.png",
+  "a1.webp",
+  "a2.webp",
+  "a3.webp",
+  "a4.webp",
+  "a5.webp",
+  "a6.webp",
+  "a7.webp",
+  "a8.webp",
 ];
 
 const row2 = [
-  "image.png",
-  "image.png",
-  "image.png",
-  "image.png",
-  "image.png",
+  "a8.webp",
+  "a7.webp",
+  "a6.webp",
+  "a5.webp",
+  "a4.webp",
+  "a3.webp",
+  "a2.webp",
+  "a1.webp",
 ];
 
 export default function HeroSliders() {
@@ -77,6 +83,6 @@ export default function HeroSliders() {
         </div>
       </Marquee>
     </div>
-    
+
   );
 }
